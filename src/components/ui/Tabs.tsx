@@ -23,7 +23,7 @@ export const Tabs: React.FC<TabsProps> = ({
           onClick={() => onChange(tab.id)}
           className={`px-6 py-2 rounded-full font-medium transition-all ${
             activeTab === tab.id
-              ? "bg-primary text-white"
+              ? "bg-[#013941] text-white"
               : "text-gray-600 hover:text-gray-900"
           }`}
         >

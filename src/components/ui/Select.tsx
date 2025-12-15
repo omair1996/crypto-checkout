@@ -60,7 +60,7 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <div className={`space-y-2 ${className}`} ref={dropdownRef}>
       {label && (
-        <label className="block text-sm font-medium text-primary">
+        <label className="block text-sm font-medium text-primary text-[#013941]">
           {label}
         </label>
       )}
@@ -72,11 +72,11 @@ export const Select: React.FC<SelectProps> = ({
             error ? "border-red-500" : "border-gray-200"
           } bg-white text-left focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all flex items-center justify-between`}
         >
-          <span className={value ? "text-gray-900" : "text-gray-400"}>
+          <span className={value ? "text-[#013941]" : "text-[#013941]"}>
             {getDisplayValue()}
           </span>
           <ChevronDown
-            className={`w-5 h-5 text-gray-400 transition-transform ${
+            className={`w-5 h-5 text-[#013941] transition-transform  ${
               isOpen ? "rotate-180" : ""
             }`}
           />

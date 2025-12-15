@@ -23,8 +23,9 @@ export const Button: React.FC<ButtonProps> = ({
     "px-6 py-4 rounded-full font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary: "bg-primary text-white hover:bg-primary-hover",
-    secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200",
+    primary: "bg-[#013941] text-white hover:bg-[#02504B] active:bg-[#012F2C]",
+    secondary:
+      "bg-[#E6F0EF] text-[#013941] hover:bg-[#D4E6E4] active:bg-[#BFD9D6]",
   };
 
   const widthStyle = fullWidth ? "w-full" : "";
