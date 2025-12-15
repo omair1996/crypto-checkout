@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { CheckoutStep1 } from "./checkout/CheckoutStep1";
 import { CheckoutStep2 } from "./checkout/CheckoutStep2";
+import { CheckoutStep3 } from "./checkout/CheckoutStep3";
 import { ProgressIndicator } from "./checkout/ProgressIndicator";
 import { useCheckoutForm } from "@/hooks/useCheckoutForm";
 
@@ -34,12 +35,24 @@ export const CryptoCheckout: React.FC = () => {
               onNext={nextStep}
             />
           )}
+
           {step === 2 && (
             <CheckoutStep2
               formData={formData}
               errors={errors}
               onFormChange={updateFormData}
               onNext={nextStep}
+              onBack={prevStep}
+            />
+          )}
+
+          {step === 3 && (
+            <CheckoutStep3
+              formData={formData}
+              errors={errors}
+              isLoading={isLoading}
+              onFormChange={updateFormData}
+              onSubmit={handleSubmit}
               onBack={prevStep}
             />
           )}
