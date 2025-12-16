@@ -87,6 +87,27 @@ describe("Select Component", () => {
     expect(screen.getByText("Please select an option")).toBeInTheDocument();
   });
 
+  it("clears search when dropdown closes", () => {
+    render(
+      <Select
+        value=""
+        onChange={() => {}}
+        options={["Apple", "Banana"]}
+        placeholder="Select"
+      />
+    );
+
+    fireEvent.click(screen.getByRole("button"));
+    fireEvent.change(screen.getByPlaceholderText("Search"), {
+      target: { value: "App" },
+    });
+
+    fireEvent.mouseDown(document.body);
+    fireEvent.click(screen.getByRole("button"));
+
+    expect(screen.getByPlaceholderText("Search")).toHaveValue("");
+  });
+
   it("handles options with objects", () => {
     const objectOptions = [
       { name: "First", icon: "" },
