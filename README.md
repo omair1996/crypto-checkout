@@ -46,6 +46,11 @@ npm start            # Start production server
 # Code Quality
 npm run lint         # Run ESLint
 npm run type-check   # Check TypeScript types (add this to package.json)
+
+# Testing
+npm test             # Run all tests
+npm run test:watch   # Run tests in watch mode
+npm run test:coverage # Run tests with coverage report
 ```
 
 ---
@@ -62,6 +67,13 @@ crypto-checkout/
 │   │
 │   ├── components/
 │   │   ├── ui/
+├── │   │   ├── _tests__/
+│   │   │   │      ├── Button.test.tsx
+│   │   │   │      ├── Input.test.tsx
+│   │   │   │      ├── Select.test.tsx
+│   │   │   │      ├── PhoneInput.test.tsx
+│   │   │   │      ├── Tabs.test.tsx
+│   │   │   │      └── CurrencySelector.test.tsx
 │   │   │   ├── Button.tsx
 │   │   │   ├── Input.tsx
 │   │   │   ├── Select.tsx
@@ -82,14 +94,20 @@ crypto-checkout/
 │   │   └── checkout.types.ts
 │   │
 │   ├── hooks/
+├── │   ├── __tests__/
+│   │   │      └── useCheckoutForm.test.ts
 │   │   └── useCheckoutForm.ts
 │   │
 │   ├── utils/
+├── │   ├──  __tests__/
+│   │   │        └── validation.test.ts
 │   │   └── validation.ts
 │   │
 │   └── constants/
 │       └── currencies.ts
 │
+├── jest.config.js
+├── jest.setup.ts
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
@@ -128,6 +146,7 @@ crypto-checkout/
 - **Validation Utils** - Reusable validation functions
 - **Constants Management** - Centralized data
 - **Clean Code** - Follows best practices
+- **Comprehensive Testing** - Unit tests for all components
 
 ---
 
@@ -161,6 +180,7 @@ crypto-checkout/
 | Tailwind CSS | Styling and responsive design   |
 | Lucide React | Icon library                    |
 | React Hooks  | State and logic management      |
+| Jest         | Testing framework               |
 
 ---
 
