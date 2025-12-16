@@ -49,7 +49,7 @@ export const CheckoutStep2: React.FC<CheckoutStep2Props> = ({
         value={formData.accountNumber}
         onChange={(e) => onFormChange({ accountNumber: e.target.value })}
         error={errors.accountNumber}
-        type="text"
+        type="number"
       />
 
       <Input
