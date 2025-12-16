@@ -31,7 +31,13 @@ export const CheckoutStep1: React.FC<CheckoutStep1Props> = ({
 }) => {
   return (
     <div className="space-y-6">
-      <Tabs tabs={CHECKOUT_TABS} activeTab={activeTab} onChange={onTabChange} />
+      <div className="flex justify-center">
+        <Tabs
+          tabs={CHECKOUT_TABS}
+          activeTab={activeTab}
+          onChange={onTabChange}
+        />
+      </div>
 
       <div className="space-y-6 mt-8">
         <div className="bg-gray-50 rounded-2xl p-6">

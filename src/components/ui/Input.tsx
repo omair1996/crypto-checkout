@@ -11,9 +11,6 @@ interface InputProps {
   className?: string;
 }
 
-/**
- * Reusable Input component
- */
 export const Input: React.FC<InputProps> = ({
   label,
   placeholder,
@@ -24,14 +21,20 @@ export const Input: React.FC<InputProps> = ({
   type = "text",
   className = "",
 }) => {
+  const inputId = label ? React.useId() : undefined;
+
   return (
     <div className={`space-y-2 ${className}`}>
       {label && (
-        <label className="block text-sm font-medium text-primary">
+        <label
+          htmlFor={inputId}
+          className="block text-sm font-medium text-primary"
+        >
           {label}
         </label>
       )}
       <input
+        id={inputId}
         type={type}
         value={value}
         onChange={onChange}
