@@ -47,7 +47,7 @@ export const CheckoutStep1: React.FC<CheckoutStep1Props> = ({
               type="number"
               value={formData.payAmount}
               onChange={(e) => onFormChange({ payAmount: e.target.value })}
-              className="text-4xl font-bold bg-transparent outline-none w-1/2"
+              className="text-[24px] leading-none font-semibold bg-transparent outline-none w-1/2"
               min="0"
               step="0.01"
             />
@@ -71,7 +71,7 @@ export const CheckoutStep1: React.FC<CheckoutStep1Props> = ({
               type="number"
               value={formData.receiveAmount}
               onChange={(e) => onFormChange({ receiveAmount: e.target.value })}
-              className="text-4xl font-bold bg-transparent outline-none w-1/2"
+              className="text-[24px] leading-none font-semibold bg-transparent outline-none w-1/2"
               min="0"
               step="0.01"
             />

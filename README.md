@@ -46,54 +46,75 @@ npm start            # Start production server
 # Code Quality
 npm run lint         # Run ESLint
 npm run type-check   # Check TypeScript types (add this to package.json)
-```
+
+
+# Testing
+npm test              # Run all tests
+npm run test:watch    # Run tests in watch mode
+npm run test:coverage # Run tests with coverage report
+
 
 ---
 
 ## Project Structure
 
 ```
+
 crypto-checkout/
 ├── src/
-│   ├── app/
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   └── globals.css
-│   │
-│   ├── components/
-│   │   ├── ui/
-│   │   │   ├── Button.tsx
-│   │   │   ├── Input.tsx
-│   │   │   ├── Select.tsx
-│   │   │   ├── PhoneInput.tsx
-│   │   │   ├── CurrencySelector.tsx
-│   │   │   └── Tabs.tsx
-│   │   │
-│   │   ├── checkout/
-│   │   │   ├── CheckoutStep1.tsx
-│   │   │   ├── CheckoutStep2.tsx
-│   │   │   ├── CheckoutStep3.tsx
-│   │   │   └── ProgressIndicator.tsx
-│   │   │
-│   │   └── CryptoCheckout.tsx
-│   │
-│   ├── types/
-│   │   ├── index.ts
-│   │   └── checkout.types.ts
-│   │
-│   ├── hooks/
-│   │   └── useCheckoutForm.ts
-│   │
-│   ├── utils/
-│   │   └── validation.ts
-│   │
-│   └── constants/
-│       └── currencies.ts
+│ ├── app/  
+│ │ ├── layout.tsx  
+│ │ ├── page.tsx  
+│ │ └── globals.css  
+│ │
+│ ├── components/
+│ │ ├── ui/  
+│ │ │ ├── **tests**/  
+│ │ │ │ ├── Button.test.tsx
+│ │ │ │ ├── Input.test.tsx
+│ │ │ │ ├── Select.test.tsx
+│ │ │ │ ├── PhoneInput.test.tsx
+│ │ │ │ ├── Tabs.test.tsx
+│ │ │ │ └── CurrencySelector.test.tsx
+│ │ │ ├── Button.tsx
+│ │ │ ├── Input.tsx
+│ │ │ ├── Select.tsx
+│ │ │ ├── PhoneInput.tsx
+│ │ │ ├── CurrencySelector.tsx
+│ │ │ └── Tabs.tsx
+│ │ │
+│ │ ├── checkout/  
+│ │ │ ├── CheckoutStep1.tsx  
+│ │ │ ├── CheckoutStep2.tsx  
+│ │ │ ├── CheckoutStep3.tsx  
+│ │ │ └── ProgressIndicator.tsx
+│ │ │
+│ │ └── CryptoCheckout.tsx  
+│ │
+│ ├── types/  
+│ │ ├── index.ts
+│ │ └── checkout.types.ts
+│ │
+│ ├── hooks/  
+│ │ ├── **tests**/  
+│ │ │ └── useCheckoutForm.test.ts
+│ │ └── useCheckoutForm.ts
+│ │
+│ ├── utils/  
+│ │ ├── **tests**/  
+│ │ │ └── validation.test.ts
+│ │ └── validation.ts
+│ │
+│ └── constants/  
+│ └── currencies.ts
 │
+├── jest.config.js  
+├── jest.setup.ts  
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
 └── next.config.js
+
 ```
 
 ---
@@ -128,6 +149,7 @@ crypto-checkout/
 - **Validation Utils** - Reusable validation functions
 - **Constants Management** - Centralized data
 - **Clean Code** - Follows best practices
+- **Comprehensive Testing - Unit tests for all components
 
 ---
 
@@ -161,6 +183,7 @@ crypto-checkout/
 | Tailwind CSS | Styling and responsive design   |
 | Lucide React | Icon library                    |
 | React Hooks  | State and logic management      |
+| Jest         | Testing framework               |
 
 ---
 
@@ -262,15 +285,5 @@ The UI closely follows the provided Figma designs with:
 
 ---
 
-## Questions or Issues?
-
-If you encounter any issues running the application:
-
-1. Ensure Node.js version is 18.17 or later
-2. Delete `node_modules` and `package-lock.json`, then run `npm install` again
-3. Clear Next.js cache: `rm -rf .next`
-4. Check that all files are in their correct locations per the project structure
-
----
-
 **Built with attention to detail and production-ready standards**
+```

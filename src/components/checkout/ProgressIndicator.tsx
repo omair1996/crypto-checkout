@@ -18,7 +18,7 @@ export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
         <div
           key={step}
           className={`h-2 w-12 rounded-full transition-all ${
-            step === currentStep ? "bg-primary" : "bg-gray-300"
+            step === currentStep ? "bg-[#013941]" : "bg-gray-300"
           }`}
         />
       ))}

@@ -9,9 +9,6 @@ interface CurrencySelectorProps {
   className?: string;
 }
 
-/**
- * Currency Selector component with search functionality
- */
 export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
   value,
   onChange,
